@@ -1,0 +1,37 @@
+name: skill_swap_app
+description: "A new Flutter project."
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4 # Ensure the SDK version matches your Flutter version
+
+dependencies:
+  flutter:
+    sdk: flutter
+  font_awesome_flutter: ^10.1.0
+  cupertino_icons: ^1.0.8
+  camera: ^0.10.0  # Camera package for accessing device camera
+  permission_handler: ^10.2.0  # Permission handling for camera and other device features
+  image_picker: ^1.1.2
+  file_picker: ^8.1.4
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0  # Linting recommendations for better code practices
+  flutter_launcher_icons: ^0.9.2
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon2.png"  # Correct path to your icon
+  remove_alpha_ios: true          # Remove alpha channel for iOS (important for App Store)

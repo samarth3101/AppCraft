@@ -1,0 +1,43 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.skill_swap_app"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.skill_swap_app"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode = 1  // Set the version code manually here
+        versionName = "1.0.0"  // Set the version name manually here
+
+        // The following two lines are redundant, you can remove them:
+        // minSdk = flutter.minSdkVersion
+        // targetSdk = flutter.targetSdkVersion
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug  // You should replace with your own signing config in production
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
